@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>BMI Calculator - Jeeva Nithish</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+  <header>
+<h2>
+  <span class="info-expand" id="info-expand" onclick="infoExpand()">☰</span>
+  <span class="info-collapse" id="info-collapse" onclick="infoCollapse()">x</span>
+  <span>BMI Calculator</span>
+</h2>
+  </header>
+  
+<section>
+
+  <p class="err-msg" id="err-msg">Invalid input</p>
+  <div class="first">
+    <h2>Height (in CM)</h2>
+    <input id="height" type="number">
+  </div>
+  <div class="second">
+    <h2>Weight (in KG)</h2>
+    <div id="count">40</div>
+    <div class="action-buttons">
+<input type="button" onclick="decrease()" value="-">
+<input type="button" onclick="increase()" value="+">
+    </div>
+
+
+  </div>
+
+  <div id="cal-btn" class="check-button" type="button" onclick="validate()">Calculate your BMI</div>
+  <div id="cal-btn-revert" class="check-button" type="button" onclick="revert()">Re-calculate your BMI</div>
+
+
+       <div class="output" id="positive-feedback">
+
+    <h3>Healthy</h3>
+    <h2 id="index-number-normal">0</h2>
+    <h4>Recommended BMI range :</h4>
+    <p class="p-range">18.5 – 24.9</p>
+    <p class="good-feedback">You're within a healthy weight range for your height. Keep up the good work!</p>
+    
+  </div>
+
+        <div class="output output2" id="low-feedback">
+
+    <h3>Underweight</h3>
+    <h2 id="index-number-low">0</h2>
+    <h4>Recommended BMI range :</h4>
+    <p class="p-range">18.5 – 24.9</p>
+    <p class="bad-feedback">Being underweight may affect health. Balance your diet and schedule check-ups.</p>
+    
+  </div>
+
+        <div class="output output2" id="high-feedback">
+
+    <h3>Obese</h3>
+    <h2 id="index-number-high">0</h2>
+    <h4>Recommended BMI range :</h4>
+    <p class="p-range">18.5 – 24.9</p>
+    <p class="bad-feedback">Your weight exceeds the recommended range, consult a healthcare professional.</p>
+    
+  </div>
+
+  <div class="output output3" id="ow-feedback">
+
+    <h3>Overweight</h3>
+    <h2 id="index-number-ow">0</h2>
+    <h4>Recommended BMI range :</h4>
+    <p class="p-range">18.5 – 24.9</p>
+    <p class="overweight-feedback">Being overweight can raise health risks, balanced diet and exercise can help.</p>
+    
+  </div>
+  
+</section>
+
+  <div id="info" class="info">
+  
+<p>
+Body Mass Index (BMI) is a numerical value derived from an individual's height and weight. It provides an estimate of body fat and serves as a basic gauge for potential health risks associated with body weight.
+<br><br><br>
+<p class="red-col">• Underweight:</p> Indicates a weight lower than what's generally considered healthy for a given height.
+<br><br>
+<p class="green-col">• Healthy Weight:</p> Suggests a balanced weight concerning height.
+<br><br>
+<p class="orange-col">• Overweight:</p> A weight range higher than what's considered healthy for a specific height.
+<br><br>
+<p class="red-col">• Obese:</p> Significantly above the healthy weight range. Being obese can increase the risk of numerous health complications and diseases.
+<p></p>
+</div>
+
+ 
+<script src="script.js"></script>
+</body>
+
+</html>
