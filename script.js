@@ -23,14 +23,14 @@ function increase() {
 
 
 function validate() {
-  if(!h.value){
+  if(!h.value || h.value < 1){
         document.getElementById("err-msg").style.opacity = 1;
-      }
-      else{
+  }
+  else{
         document.getElementById("err-msg").style.opacity = 0;
         calculate();
         finalResult();
-      }
+  }
 }
 
 
